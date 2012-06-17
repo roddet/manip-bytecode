@@ -1,0 +1,6 @@
+RULE trace click
+CLASS com.roddet.swing.app.SwingFrame
+METHOD actionPerformed(java.awt.event.ActionEvent)
+IF TRUE
+DO System.out.println("Click!");
+ENDRULE

@@ -1,0 +1,6 @@
+RULE addText on click
+CLASS com.roddet.swing.app.SwingFrame
+METHOD actionPerformed(java.awt.event.ActionEvent)
+IF TRUE
+DO $0.swingText.setText("Hello, it's magic!!")
+ENDRULE

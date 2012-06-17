@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.roddet</groupId>
+    <artifactId>agent-simple</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+
+    <name>agent-simple</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>2.4</version>
+                    <configuration>
+                        <archive>
+                            <manifestEntries>
+                                <Premain-Class>com.roddet.agent.simple.MySimpleAgent</Premain-Class>
+                                <Agent-Class>com.roddet.agent.simple.MySimpleAgent</Agent-Class>
+                                <Can-Retransform-Classes>true</Can-Retransform-Classes>
+                                <Can-Redefine-Classes>true</Can-Redefine-Classes>
+                            </manifestEntries>
+                        </archive>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
